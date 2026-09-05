@@ -10,11 +10,12 @@ function showStatus(message, kind) {
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const submit = form.querySelector("button[type='submit']");
+  const fields = new FormData(form);
   const data = {
-    name: form.name.value,
-    email: form.email.value,
-    country: form.country.value,
-    website: form.website.value,
+    name: String(fields.get("name") || ""),
+    email: String(fields.get("email") || ""),
+    country: String(fields.get("country") || ""),
+    website: String(fields.get("website") || ""),
   };
 
   submit.disabled = true;
@@ -36,7 +37,7 @@ form.addEventListener("submit", async (event) => {
     }
     showStatus("Check name, email, and country, then try again.", "err");
   } catch {
-    showStatus("You are on the early access list.", "ok");
+    showStatus("Something went wrong. Please try again.", "err");
   } finally {
     submit.disabled = false;
   }
