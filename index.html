@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NIWL — Early access list</title>
+    <meta
+      name="description"
+      content="NIWL is a networking intelligence system used at LEAP 2026. Early access list."
+    />
+    <meta property="og:title" content="NIWL — Early access list" />
+    <meta
+      property="og:description"
+      content="Networking intelligence used at LEAP 2026 (31 Aug–2 Sep). Join the early access list."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://niwl.vercel.app/" />
+    <meta property="og:image" content="https://niwl.vercel.app/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="NIWL" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <header class="mast">
+        <p class="mark">NIWL</p>
+        <p class="kicker">Early access list</p>
+      </header>
+
+      <main>
+        <h1>Networking intelligence, used at LEAP 2026.</h1>
+        <p class="lede">
+          NIWL is a networking intelligence system. At LEAP 2026 (31 August–2
+          September) it used business cards, event photos, and voice notes from
+          the floor to keep a working record of who was met.
+        </p>
+        <p class="note">
+          That run already happened. This page is the early access list. Join if
+          you want that system for the next hall you walk. No pricing. No launch
+          date.
+        </p>
+
+        <form id="waitlist-form" novalidate>
+          <div class="hp" aria-hidden="true">
+            <label for="website">Website</label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          />
+
+          <label for="country">Country</label>
+          <input
+            id="country"
+            name="country"
+            type="text"
+            autocomplete="country-name"
+            required
+          />
+
+          <button type="submit">Join the early access list</button>
+          <p id="form-status" class="status" role="status" hidden></p>
+        </form>
+      </main>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+:root {
+  --ink: #1a1612;
+  --paper: #f3ead8;
+  --card: #fff8ec;
+  --rule: #c9b79a;
+  --muted: #6b5d4c;
+  --accent: #9a3b1d;
+  --ok: #2f5a3c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #ffe8c4 0%, transparent 55%),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.5;
+}
+
+.frame {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.mast {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.mark {
+  margin: 0;
+  letter-spacing: 0.28em;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.lede,
+.note {
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+
+.note {
+  color: var(--muted);
+}
+
+form {
+  margin-top: 2rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 1.25rem;
+}
+
+label {
+  display: block;
+  margin: 0.85rem 0 0.3rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+form label:first-of-type {
+  margin-top: 0;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--rule);
+  background: #fffdf8;
+  color: var(--ink);
+  font: inherit;
+  padding: 0.65rem 0.7rem;
+}
+
+input:focus {
+  outline: 2px solid var(--ink);
+  outline-offset: 1px;
+}
+
+button {
+  margin-top: 1.15rem;
+  width: 100%;
+  border: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2a231c;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.status {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+}
+
+.status.ok {
+  color: var(--ok);
+}
+
+.status.err {
+  color: var(--accent);
+}
+
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (max-width: 520px) {
+  .mast {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}
