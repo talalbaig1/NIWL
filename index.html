@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NIWL — Early access list</title>
+    <meta
+      name="description"
+      content="NIWL early access list. From LEAP 2026: business cards, event photos, and voice notes."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <header class="mast">
+        <p class="mark">NIWL</p>
+        <p class="kicker">Early access list</p>
+      </header>
+
+      <main>
+        <h1>We kept three things from LEAP 2026.</h1>
+        <p class="lede">
+          31 August–2 September. On the floor we collected business cards,
+          event photos, and voice notes. That is the record. Nothing else.
+        </p>
+
+        <ul class="kept">
+          <li>
+            <span class="kept-label">Business cards</span>
+            Names and how to reach people we met.
+          </li>
+          <li>
+            <span class="kept-label">Event photos</span>
+            Stills from the hall — not a product gallery.
+          </li>
+          <li>
+            <span class="kept-label">Voice notes</span>
+            Short spoken follow-ups from the days themselves.
+          </li>
+        </ul>
+
+        <p class="note">
+          This page is the early access list. It is not a sign-up. There is no
+          pricing and no launch date here.
+        </p>
+
+        <form id="waitlist-form" novalidate>
+          <div class="hp" aria-hidden="true">
+            <label for="website">Website</label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          />
+
+          <label for="country">Country</label>
+          <input
+            id="country"
+            name="country"
+            type="text"
+            autocomplete="country-name"
+            required
+          />
+
+          <button type="submit">Join the early access list</button>
+          <p id="form-status" class="status" role="status" hidden></p>
+        </form>
+      </main>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
