@@ -2,7 +2,7 @@
 
 Early access list site. Not a sign-up. No pricing. No launch date.
 
-The public page only mentions what was used at LEAP 2026 (31 August–2 September): business cards, event photos, and voice notes.
+The public page leads with “Networking intelligence, used at LEAP 2026.” It says NIWL is a networking intelligence system that ran at LEAP 2026 (31 August–2 September), using business cards, event photos, and voice notes from the floor to keep a working record of who was met. That run already happened. This page is the early access list.
 
 The browser posts to `/api/waitlist` on this project. It never sees the automation webhook URL.
 
